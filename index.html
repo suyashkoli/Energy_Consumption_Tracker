@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Energy Consumption Tracker</h1>
+        
+        <div class="add-appliance-form">
+            <h2>Add New Appliance</h2>
+            <div class="input-group">
+                <label for="applianceName">Appliance Name</label>
+                <input type="text" id="applianceName" placeholder="e.g., Refrigerator">
+            </div>
+            <div class="input-group">
+                <label for="powerRating">Power Rating 
+                    <span class="tooltip">?
+                        <span class="tooltip-text">The power consumption in watts (W). Check your appliance's label or manual.</span>
+                    </span>
+                </label>
+                <input type="number" id="powerRating" placeholder="Power in watts">
+            </div>
+            <div class="input-group">
+                <label for="hoursUsed">Hours Used per Day
+                    <span class="tooltip">?
+                        <span class="tooltip-text">Average number of hours the appliance is used daily</span>
+                    </span>
+                </label>
+                <input type="number" id="hoursUsed" placeholder="Hours per day" min="0" max="24" step="0.5">
+            </div>
+            <button onclick="addAppliance()">Add Appliance</button>
+        </div>
+
+        <div class="total-consumption">
+            <h2>Daily Energy Overview</h2>
+            <div class="consumption-details">
+                <div class="consumption-card">
+                    <h3>Total Energy</h3>
+                    <div class="consumption-value" id="totalEnergy">0</div>
+                    <p>kWh/day</p>
+                </div>
+                <div class="consumption-card">
+                    <h3>Estimated Cost</h3>
+                    <div class="consumption-value" id="estimatedCost">₹0</div>
+                    <p>per day</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="consumptionChart"></canvas>
+            </div>
+        </div>
+
+        <div class="appliances-list">
+            <h2>Your Appliances</h2>
+            <table id="appliancesTable">
+                <thead>
+                    <tr>
+                        <th>Appliance</th>
+                        <th>Power (W)</th>
+                        <th>Hours/Day</th>
+                        <th>Daily kWh</th>
+                        <th>Daily Cost (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="appliancesList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

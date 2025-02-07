@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2196F3;
+    --primary-dark: #1976D2;
+    --success-color: #4CAF50;
+    --danger-color: #f44336;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgba(248, 249, 250, 0.95);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding: 20px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.add-appliance-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.add-appliance-form:hover {
+    transform: translateY(-5px);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appliances-list {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+tr {
+    transition: background-color 0.3s ease;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.total-consumption {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.consumption-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.consumption-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.consumption-card:hover {
+    transform: translateY(-5px);
+}
+
+.consumption-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.chart-container {
+    margin-top: 30px;
+    height: 300px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
