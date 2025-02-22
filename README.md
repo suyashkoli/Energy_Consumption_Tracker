@@ -38,7 +38,7 @@ A web-based application that helps users track and analyze their household energ
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Niranjan/Energy-Consumption-Project.git
+   git clone https://github.com/Suyash_koli/Energy-Consumption-Project.git
    ```
 2. Open `index.html` in your web browser
 
