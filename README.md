@@ -53,6 +53,6 @@ This project is open source and available under the MIT License.
 ## Author
 
 - Suyash
-- GitHub: [@Suyashkoli](https://github.com/Suyashkoli)
+- GitHub: [@niranjan kole](https://github.com/niranjan kole)
 
-## Made by Suyash# Energy_Consumption_Tracker
+## Made by niranjan# Energy_Consumption_Tracker
